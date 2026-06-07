@@ -1,0 +1,19 @@
+/* SOURCE ACKNOWLEDGEMENT REQUIRED BY ASSIGNMENT
+ * Project repository/settings configuration prepared for this assignment with AI support from OpenAI ChatGPT: https://chat.openai.com/
+ */
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = 'CampusMate'
+include ':app'

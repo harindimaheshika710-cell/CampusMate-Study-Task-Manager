@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/header_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌦️ Weather Assistant"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Current weather, campus travel suggestion and 3-day forecast."
+                android:textColor="#EAF2FF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:background="@drawable/feature_card_bg"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campus city"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_bg"
+                android:hint="Enter city, e.g. Colombo"
+                android:inputType="textCapWords"
+                android:minHeight="52dp"
+                android:text="Colombo" />
+
+            <Button
+                android:id="@+id/btnGetWeather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/btn_green"
+                android:minHeight="52dp"
+                android:text="Get Weather Suggestion"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Quick Sri Lanka cities"
+                android:textColor="@color/text_medium"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCityColombo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_primary"
+                    android:minHeight="40dp"
+                    android:text="Colombo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnCityKandy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_primary"
+                    android:minHeight="40dp"
+                    android:text="Kandy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnCityKurunegala"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_primary"
+                    android:minHeight="40dp"
+                    android:text="Kurunegala"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtWeatherStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/weather_result_bg"
+            android:elevation="4dp"
+            android:lineSpacingExtra="6dp"
+            android:padding="18dp"
+            android:text="☁️ Weather result will appear here."
+            android:textColor="@color/text_dark"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

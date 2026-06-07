@@ -1,0 +1,21 @@
+/* SOURCE ACKNOWLEDGEMENT REQUIRED BY ASSIGNMENT
+ * Gradle configuration was prepared for this assignment with AI support from OpenAI ChatGPT: https://chat.openai.com/
+ * Android Gradle Plugin setup referenced from official Android Developers documentation: https://developer.android.com/build
+ */
+plugins {
+    id 'com.android.application' version '8.2.2' apply false
+}
+
+// Keep Kotlin transitive dependencies aligned to avoid duplicate-class errors.
+allprojects {
+    configurations.configureEach {
+        resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
+        resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22'
+        resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22'
+        resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22'
+    }
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

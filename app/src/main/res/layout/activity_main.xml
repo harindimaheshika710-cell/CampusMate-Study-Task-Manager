@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:background="@drawable/header_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/chip_blue"
+                android:gravity="center"
+                android:text="🎓"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.02"
+                    android:text="CampusMate"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Advanced Student Study Planner"
+                    android:textColor="#EAF2FF"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="SQLite • APIs • Timer • Dashboard"
+                    android:textColor="#DCEBFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/hero_card_bg"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📊 Today Dashboard"
+                    android:textColor="@color/text_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDashboardPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chip_green"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="0%"
+                    android:textColor="@color/accent_green_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtProgressMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Start strong: add your first task, check weather, then use the focus timer."
+                android:textColor="@color/text_medium"
+                android:textSize="13sp" />
+
+            <ProgressBar
+                android:id="@+id/progressDashboard"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:max="100"
+                android:progress="0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_blue"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/txtTotalTasks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tasks"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_orange"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/txtPendingTasks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/warning_orange"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pending"
+                        android:textColor="@color/text_medium"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_green"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/txtCompletedTasks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/accent_green_dark"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Done"
+                        android:textColor="@color/accent_green_dark"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_purple"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/txtSavedBooks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/accent_purple"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Books"
+                        android:textColor="@color/accent_purple"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="18dp"
+            android:text="Quick Features"
+            android:textColor="@color/text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="18dp"
+            android:text="Clean demo screens for task CRUD, weather APIs, book API, SQLite and study timer."
+            android:textColor="@color/text_medium"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/mini_card_bg"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✅" android:textSize="25sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Study Task Manager" android:textColor="@color/text_dark" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="CRUD, filters, search" android:textColor="@color/text_medium" android:textSize="11sp" />
+                <Button android:id="@+id/btnTasks" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:background="@drawable/btn_primary" android:minHeight="40dp" android:text="Open" android:textAllCaps="false" android:textColor="@color/white" android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/mini_card_bg"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌦️" android:textSize="25sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Weather Assistant" android:textColor="@color/text_dark" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Open-Meteo API" android:textColor="@color/text_medium" android:textSize="11sp" />
+                <Button android:id="@+id/btnWeather" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:background="@drawable/btn_green" android:minHeight="40dp" android:text="Check" android:textAllCaps="false" android:textColor="@color/white" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/mini_card_bg"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📚" android:textSize="25sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Study Book Finder" android:textColor="@color/text_dark" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Open Library API" android:textColor="@color/text_medium" android:textSize="11sp" />
+                <Button android:id="@+id/btnBooks" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:background="@drawable/btn_primary" android:minHeight="40dp" android:text="Search" android:textAllCaps="false" android:textColor="@color/white" android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/mini_card_bg"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⏱️" android:textSize="25sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Focus Timer" android:textColor="@color/text_dark" android:textSize="15sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Pomodoro + tips" android:textColor="@color/text_medium" android:textSize="11sp" />
+                <Button android:id="@+id/btnFocusTimer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:background="@drawable/btn_violet" android:minHeight="40dp" android:text="Start" android:textAllCaps="false" android:textColor="@color/white" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFavorites"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_green"
+                android:minHeight="46dp"
+                android:text="⭐ Saved Books"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnAbout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_primary"
+                android:minHeight="46dp"
+                android:text="ℹ️ About Project"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -114,13 +114,3 @@ This project demonstrates:
 * User Interface Design
 * Mobile Application Testing
 
-## Author
-
-Harindi Maheshika
-
-GitHub:
-https://github.com/harindimaheshika710-cell
-
-## License
-
-This project was developed for educational purposes.
